@@ -26,11 +26,11 @@
 
 ------
 
-# My project, [Meal Magic], is a web application that helps users generate recipes based on the ingredients they have on hand. Using advanced algorithms, our application suggests recipes that are tailored to the user's preferences and dietary restrictions. Whether you're an experienced chef or just starting out in the kitchen, my platform makes it easy to discover new and delicious recipes that you can make with the ingredients you already have. So why waste time searching through cookbooks or browsing the web when you can get personalized recipe recommendations in just a few clicks? Try [Meal Magic] today and take the first step towards culinary success!
+### My project, [Meal Magic], is a web application that helps users generate recipes based on the ingredients they have on hand. Using advanced algorithms, our application suggests recipes that are tailored to the user's preferences and dietary restrictions. Whether you're an experienced chef or just starting out in the kitchen, my platform makes it easy to discover new and delicious recipes that you can make with the ingredients you already have. So why waste time searching through cookbooks or browsing the web when you can get personalized recipe recommendations in just a few clicks? Try [Meal Magic] today and take the first step towards culinary success!
 
 ------
 
-# My project, [Meal Magic], is a web application that generates personalized recipes based on the ingredients you have. With just a few clicks, discover new and delicious recipes tailored to your preferences and dietary restrictions. Start cooking smarter today with [Meal Magic]!
+### My project, [Meal Magic], is a web application that generates personalized recipes based on the ingredients you have. With just a few clicks, discover new and delicious recipes tailored to your preferences and dietary restrictions. Start cooking smarter today with [Meal Magic]!
 
 
 --------
