@@ -31,3 +31,10 @@ My project, [Meal Magic], is a web application that helps users generate recipes
 ------
 
 My project, [Meal Magic], is a web application that generates personalized recipes based on the ingredients you have. With just a few clicks, discover new and delicious recipes tailored to your preferences and dietary restrictions. Start cooking smarter today with [Meal Magic]!
+
+
+--------
+Planing : 
+[ ] Create Main page on App.jsx
+[ ] Form for user input
+[ ] API or database for generate all the recipes
