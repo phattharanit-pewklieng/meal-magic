@@ -71,7 +71,9 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "express": "^4.17.2"
+    "bootstrap": "^5.2.3",
+    "express": "^4.17.2",
+    "ts-node": "^10.9.1"
   },
   "prettier": {
     "semi": false,
