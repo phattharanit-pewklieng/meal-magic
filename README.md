@@ -37,6 +37,8 @@
 
 
 --------
+` User Story: as a user I would like to search food recipe from what I had in kitchen and I get a list of food recipe so I can pick and cook from it`
+
 
 # Planing : 
 - [ ] Create Main page on App.jsx
