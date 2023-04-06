@@ -17,14 +17,14 @@ function App() {
   }
   // useState to store recipe
   const [recipe, setRecipe] = useState(initialCharacterState)
-  const [searchRecipe, setSearchRecipe] = useState('')
+  // const [searchRecipe, setSearchRecipe] = useState('')
 
-  const { id } = useParams()
-  console.log(id)
+  // const { id } = useParams()
+  // console.log(id)
 
-  useEffect(() => {
-    handleSearch()
-  }, [])
+  // useEffect(() => {
+  //   handleSearch()
+  // }, [])
 
   async function handleDisplayer() {
     try {
@@ -36,36 +36,34 @@ function App() {
     }
   }
 
-  const updateSearch = (e) => {
-    setSearchRecipe(e.target.value)
-  }
+  // const updateSearch = (e) => {
+  //   setSearchRecipe(e.target.value)
+  // }
 
-  const getSearch = (e) => {
-    e.preventDefault()
-    setQuery(searchRecipe)
-  }
+  // const getSearch = (e) => {
+  //   e.preventDefault()
+  //   setQuery(searchRecipe)
+  // }
 
-  async function handleSearch() {
-    try {
-      const output = await getRecipeByCuisine(query)
-      setRecipe(output)
-      console.log(output)
-    } catch (err) {
-      console.error(err)
-    }
-  }
+  // async function handleSearch() {
+  //   try {
+  //     const output = await getRecipeByCuisine(query)
+  //     setRecipe(output)
+  //     console.log(output)
+  //   } catch (err) {
+  //     console.error(err)
+  //   }
+  // }
 
   return (
     <div className="container">
       <div className="header">
         <h1>Meal-Magic</h1>
         <div className="Input_header">
-          <form onSubmit={getSearch} className="search-form">
+          <form className="search-form">
             <input
               className="search-bar"
               type="text"
-              value={searchRecipe}
-              onChange={updateSearch}
               placeholder="Search Food"
             />
             <button className="search-btn" type="submit">
@@ -80,6 +78,9 @@ function App() {
         </p>
 
         <h2>Random Recipe</h2>
+
+
+
         <button onClick={handleDisplayer}>Display</button>
 
         {/* <div>
@@ -91,15 +92,16 @@ function App() {
     <p>{recipe.ingredients}</p>
   </div>
 ))} */}
-          </div>
-        <div> 
+        {/* </div> */}
+        {/* <div>  */}
         {/* what to map and list all recipe */}
         {/* search recipe */}
-           <h3>{recipe.label}</h3>
-          <p>calories: {`${recipe.calories}`} </p>
-          <img src={recipe.image} alt="" />
-          <p>{recipe.ingredients}</p>
-        </div> 
+        
+        <h3>{recipe.label}</h3>
+        <p>calories: {`${recipe.calories}`} </p>
+        <img src={recipe.image} alt="" />
+        {/* <p>{recipe.ingredients[0]}</p> */}
+      </div>
       </div>
     
   )
