@@ -3,6 +3,7 @@ import { fetchRecipe, getRecipeByCuisine } from '../apis/recipes'
 import { useParams } from 'react-router-dom'
 import { RecipeCard } from './RecipeCard'
 import { title } from 'process'
+import { log } from 'console'
 
 function App() {
   const initialCharacterState = {
@@ -14,10 +15,14 @@ function App() {
     source: '',
     servings: '',
     label: '',
+    foodId: '',
+    url: ''
   }
   // useState to store recipe
   const [recipe, setRecipe] = useState(initialCharacterState)
-  // const [searchRecipe, setSearchRecipe] = useState('')
+  const [searchRecipe, setSearchRecipe] = useState('')
+  console.log(searchRecipe);
+  
 
   // const { id } = useParams()
   // console.log(id)
@@ -35,6 +40,10 @@ function App() {
       console.error(err)
     }
   }
+
+  useEffect(()=>{
+
+  },[searchRecipe])
 
   // const updateSearch = (e) => {
   //   setSearchRecipe(e.target.value)
@@ -55,6 +64,7 @@ function App() {
   //   }
   // }
 
+
   return (
     <div className="container">
       <div className="header">
@@ -64,7 +74,7 @@ function App() {
             <input
               className="search-bar"
               type="text"
-              placeholder="Search Food"
+              placeholder="Search Food" value={searchRecipe} onChange={(e)=>  setSearchRecipe(e.target.value)}
             />
             <button className="search-btn" type="submit">
               Search
@@ -82,25 +92,20 @@ function App() {
 
 
         <button onClick={handleDisplayer}>Display</button>
+ 
+         {recipe && (
+  <>
+    <h3 style={{color: "blue"}}>{recipe.label}</h3>
+    <p>{`Calories: ${recipe.calories}`} </p>
+    <img src={recipe.image} alt={recipe.label} />
+   
+   <a href={recipe.url}>{recipe.url}</a>
+  </>
+)} 
 
-        {/* <div>
-        {recipes.map((recipe, i) => (
-  <div key={recipe.calories}>
-    <h3>{recipe.label}</h3>
-    <p>calories: {`${recipe.calories}`}</p>
-    <img src={recipe.image} alt="" />
-    <p>{recipe.ingredients}</p>
-  </div>
-))} */}
-        {/* </div> */}
-        {/* <div>  */}
-        {/* what to map and list all recipe */}
-        {/* search recipe */}
+      
         
-        <h3>{recipe.label}</h3>
-        <p>calories: {`${recipe.calories}`} </p>
-        <img src={recipe.image} alt="" />
-        {/* <p>{recipe.ingredients[0]}</p> */}
+      
       </div>
       </div>
     

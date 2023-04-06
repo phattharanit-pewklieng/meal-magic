@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-import { ReactComponent as Time } from "./icon/time.svg";
-import { ReactComponent as Kcal } from "./icon/kcal.svg";
-import { ReactComponent as Serving } from "./icon/serving.svg";
-import { ReactComponent as Source } from "./icon/source.svg";
-import { ReactComponent as Open } from "./icon/open.svg";
 
 interface Ingredient {
   text: string;

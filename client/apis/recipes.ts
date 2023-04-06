@@ -12,6 +12,7 @@ interface Recipe {
   source: string
   servings: string
   label: string
+  url: string
 }
 
 // const apiKey = '9ab64653ed394bddb9b9d8c8a1eb3b63'
@@ -29,13 +30,14 @@ export async function fetchRecipe() {
       // `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${apiKey}&minCarbs=10&maxCarbs=50&number=3`
     )
     .accept('application/json')
-  console.log(response)
-  //.recipes[0].extendedIngredients[0]
-  const recipe = response.body.hits[0].recipe as Recipe
-  // const recipe = response.body.menuItems[0]
-  console.log(recipe)
-  return recipe
-}
+  
+  const hitsLength = response.body.hits.length;
+  const randomIndex = Math.floor(Math.random() * hitsLength);
+  const data = response.body.hits[randomIndex].recipe;
+  console.log(data);
+  return data;
+  }
+
 
 // import request from 'superagent'
 
